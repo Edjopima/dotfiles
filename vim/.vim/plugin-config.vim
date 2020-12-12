@@ -1,6 +1,5 @@
 " HTML, JSX
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'
-
 " Lightlane
 let g:lightline = {
       \ 'active': {
@@ -19,7 +18,7 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head',
       \   'kitestatus': 'kite#statusline'
       \ },
-      \ ' olorscheme': 'gruvbox',
+      \ 'colorscheme': 'gruvbox',
       \ 'subseparator': {
       \   'left': '',
       \   'right': ''
@@ -34,18 +33,22 @@ let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
-let g:javascript_plugin_flow = 1
 
 let g:javascript_plugin_flow = 1
 
-"kite
-let g:kite_supported_languages = ['python', 'javascript', 'go']
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsSnippetDirectories=[$HOME.'/config/.vim/UltiSnips']
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
-"coc
-"autocmd FileType python let b:coc_suggest_disable = 1
-"autocmd FileType javascript let b:coc_suggest_disable = 1
-"autocmd FileType scss setl iskeyword+=@-@
-let g:coc_global_extensions=['coc-tsserver', 'coc-python', 'coc-json']
+" kite
+let g:kite_supported_languages = ['javascript', 'python']
+
+" coc
+autocmd FileType python let b:coc_suggest_disable = 1
+autocmd FileType javascript let b:coc_suggest_disable = 1
+autocmd FileType scss setl iskeyword+=@-@
 
 " vim fugitive
 command! -bang -nargs=? -complete=dir GFiles
@@ -73,9 +76,16 @@ set updatetime=300
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
 
-"colorpicker
-let g:pickachu_default_app = "color"
-let g:pickachu_default_color_format = "hex"
+" always show signcolumns
+set signcolumn=yes
+
+" fugitive always vertical diffing
+set diffopt+=vertical
+
+
+
+" Highlight symbol under cursor on CursorHold
+
 
 let $FZF_DEFAULT_OPTS='--layout=reverse'
 "let g:fzf_layout = { 'window': 'call FloatingFZF()' }
@@ -117,3 +127,4 @@ let $FZF_DEFAULT_OPTS='--layout=reverse'
     "" has been found.
     "return search_result
 "endfunction
+

@@ -8,7 +8,7 @@ base = lambda fg='text', bg='dark': {
     'background': colors[bg]
 }
 
-separator = lambda: widget.Sep(**base(), linewidth=0, padding=5)
+separator = lambda: widget.Sep(**base(), linewidth =0, padding=5)
 
 icon = lambda fg='text', bg='dark', fontsize=16, text="?": widget.TextBox(
     **base(fg, bg),
@@ -25,7 +25,7 @@ powerline = lambda fg="light", bg="dark": widget.TextBox(
 )
 
 workspaces = lambda: [
-    separator(),
+#    separator(),
     widget.GroupBox(
         **base(fg='light'),
         font='UbuntuMono Nerd Font',
@@ -47,50 +47,30 @@ workspaces = lambda: [
         other_screen_border=colors['dark'],
         disable_drag=True
     ),
-    separator(),
+#    separator(),
     widget.WindowName(**base(fg='focus'), fontsize=14, padding=5),
-    separator(),
+#    separator(),
 ]
 
 primary_widgets = [
     *workspaces(),
-
     separator(),
-
-    powerline('color3'),
-
-    icon(bg="color3", text=' '),  # Icon: nf-fa-feed
-    
-    widget.Net(**base(bg='color3'), interface='wlp2s0'),
-
-    powerline('color2', 'color3'),
-
-    widget.CurrentLayoutIcon(**base(bg='color2'), scale=0.65),
-
-    widget.CurrentLayout(**base(bg='color2'), padding=5),
-
-    powerline('color1', 'color2'),
-
-    icon(bg="color1", fontsize=17, text=' '), # Icon: nf-mdi-calendar_clock
-
-    widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %H:%M '),
-
-    powerline('dark', 'color1'),
-
-    widget.Systray(background=colors['dark'], padding=5),
-
+#    powerline('color3'),
+    icon(bg="dark",fg='color3', text=' '),  # Icon: nf-fa-feed
+    widget.Net(**base(bg='dark', fg='color3'), interface='wlp2s0'),
+  # powerline('color2', 'color3'),
+    separator(),
+  #  powerline('color1', 'color2'),
+    icon(bg="dark",fg='color1', fontsize=17, text=' '), # Icon: nf-mdi-calendar_clock
+    widget.Clock(**base(bg='dark',fg='color1'), format='%d/%m/%Y - %H:%M '),
+  #  powerline('dark', 'color1'),
+    widget.Systray(background=colors['dark'], padding =2),
 ]
 
 secondary_widgets = [
     *workspaces(),
-
     separator(),
-
     powerline('color1', 'dark'),
-
-    widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
-
-    widget.CurrentLayout(**base(bg='color1'), padding=5),
 ]
 
 widget_defaults = {
