@@ -13,6 +13,7 @@ Plug 'itchyny/lightline.vim'
 " Themes
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'joshdick/onedark.vim'
 
 " Tree
 Plug 'scrooloose/nerdtree'
@@ -43,6 +44,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdcommenter'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } "markdown preview 
 
 " git
 Plug 'tpope/vim-fugitive'

@@ -56,6 +56,9 @@ primary_widgets = [
     *workspaces(),
     separator(),
 #    powerline('color3'),
+    icon(bg='dark', fg='color2', text='🌡'),
+    widget.ThermalSensor(**base(bg='dark', fg='color2')),
+    separator(),
     icon(bg="dark",fg='color3', text=' '),  # Icon: nf-fa-feed
     widget.Net(**base(bg='dark', fg='color3'), interface='wlp2s0'),
   # powerline('color2', 'color3'),
