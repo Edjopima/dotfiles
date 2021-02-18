@@ -5,3 +5,4 @@
 #udiskie -t &
 #volumeicon &
 nitrogen --restore &
+cbatticon -u 5 &
