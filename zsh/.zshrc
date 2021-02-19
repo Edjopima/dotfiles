@@ -129,6 +129,8 @@ alias usavpn-start="systemctl start openvpn-client@TunnelBearUnitedStates.servic
 alias usavpn-stop="systemctl stop openvpn-client@TunnelBearUnitedStates.service"
 alias mexvpn-start="systemctl start openvpn-client@TunnelBearMexico.service"
 alias mexvpn-stop="systemctl stop openvpn-client@TunnelBearMexico.service"
+alias pos-frontend="cd /home/edjopima/Documentos/work/veinte/pos-frontend"
+alias pos-backend="cd /home/edjopima/Documentos/work/veinte/pos-backend"
 
 export JAVA_HOME=/usr/lib/jvm/default
 export ANDROID_SDK_ROOT=/opt/android-sdk
