@@ -15,7 +15,7 @@ export ZSH="/home/edjopima/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="dracula"
+ZSH_THEME="TheOne"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -129,8 +129,8 @@ alias usavpn-start="systemctl start openvpn-client@TunnelBearUnitedStates.servic
 alias usavpn-stop="systemctl stop openvpn-client@TunnelBearUnitedStates.service"
 alias mexvpn-start="systemctl start openvpn-client@TunnelBearMexico.service"
 alias mexvpn-stop="systemctl stop openvpn-client@TunnelBearMexico.service"
-alias pos-frontend="cd /home/edjopima/Documentos/work/veinte/pos-frontend"
-alias pos-backend="cd /home/edjopima/Documentos/work/veinte/pos-backend"
+alias pos-frontend="cd /home/edjopima/Documents/work/veinte/pos-frontend"
+alias pos-backend="cd /home/edjopima/Documents/work/veinte/pos-backend"
 
 export JAVA_HOME=/usr/lib/jvm/default
 export ANDROID_SDK_ROOT=/opt/android-sdk

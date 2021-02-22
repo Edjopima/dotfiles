@@ -50,10 +50,10 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "space", lazy.spawn("rofi -show drun")),
+    ([mod], "space", lazy.spawn("rofi -show drun -config ~/.config/.rofi/themes/onedark.rasi -show-icons")),
 
     # Window Nav
-    ([mod, "shift"], "space", lazy.spawn("rofi -show")),
+    ([mod, "shift"], "space", lazy.spawn("rofi -show window -config ~/.config/.rofi/themes/onedark.rasi -show-icons")),
 
     # Browser
     ([mod], "b", lazy.spawn("firefox")),

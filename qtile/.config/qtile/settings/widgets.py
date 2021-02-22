@@ -28,7 +28,7 @@ workspaces = lambda: [
 #    separator(),
     widget.GroupBox(
         **base(fg='light'),
-        font='UbuntuMono Nerd Font',
+        font='FiraCode Nerd Font',
         fontsize=19,
         margin_y=3,
         margin_x=0,
@@ -48,7 +48,7 @@ workspaces = lambda: [
         disable_drag=True
     ),
 #    separator(),
-    widget.WindowName(**base(fg='focus'), fontsize=14, padding=5),
+    widget.WindowName(**base(fg='focus'), fontsize=12, padding=5),
 #    separator(),
 ]
 

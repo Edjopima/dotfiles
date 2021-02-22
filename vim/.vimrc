@@ -21,6 +21,8 @@ let g:onedark_termcolors=256
 let g:gruvbox_contrast_dark ="hard" 
 set laststatus=2
 set noshowmode
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
 
 " Javascript
 "autocmd bufnewfile,bufread *.tsx set filetype=typescript.tsx
