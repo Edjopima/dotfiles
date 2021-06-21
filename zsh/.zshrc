@@ -120,17 +120,22 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 #Custom alias
-alias projects="cd ~/Documentos/proyectos"
-alias inpimaca-app="cd ~/Documentos/proyectos/inpimaca-app"
-alias inpimaca-api="cd ~/Documentos/proyectos/inpimaca-api"
-alias inpimacaApp="cd ~/Documentos/proyectos/inpimacaMobileApp"
-alias portfolio="cd /home/edjopima/Documentos/proyectos/portfolio"
-alias usavpn-start="systemctl start openvpn-client@TunnelBearUnitedStates.service"
-alias usavpn-stop="systemctl stop openvpn-client@TunnelBearUnitedStates.service"
-alias mexvpn-start="systemctl start openvpn-client@TunnelBearMexico.service"
-alias mexvpn-stop="systemctl stop openvpn-client@TunnelBearMexico.service"
-alias pos-frontend="cd /home/edjopima/Documents/work/veinte/pos-frontend"
-alias pos-backend="cd /home/edjopima/Documents/work/veinte/pos-backend"
+# alias projects="cd ~/Documentos/proyectos"
+# alias inpimaca-app="cd ~/Documentos/proyectos/inpimaca-app"
+# alias inpimaca-api="cd ~/Documentos/proyectos/inpimaca-api"
+# alias inpimacaApp="cd ~/Documentos/proyectos/inpimacaMobileApp"
+# alias portfolio="cd /home/edjopima/Documentos/proyectos/portfolio"
+# alias usavpn-start="systemctl start openvpn-client@TunnelBearUnitedStates.service"
+# alias usavpn-stop="systemctl stop openvpn-client@TunnelBearUnitedStates.service"
+# alias mexvpn-start="systemctl start openvpn-client@TunnelBearMexico.service"
+# alias mexvpn-stop="systemctl stop openvpn-client@TunnelBearMexico.service"
+# alias pos-frontend="cd /home/edjopima/Documents/work/veinte/pos-frontend"
+# alias pos-backend="cd /home/edjopima/Documents/work/veinte/pos-backend"
+alias veinteFront="cd /home/edjopima/Documents/work/veinte/veinte-frontend"
+alias veinteBack="cd /home/edjopima/Documents/work/veinte/backend-service"
+alias dot="cd home/edjopima/dotfiles"
+alias work="cd /home/edjopima/Documents/work"
+alias veinte="cd /home/edjopima/Documents/work/veinte"
 
 export JAVA_HOME=/usr/lib/jvm/default
 export ANDROID_SDK_ROOT=/opt/android-sdk
