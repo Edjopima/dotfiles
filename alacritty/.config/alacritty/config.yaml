@@ -30,7 +30,8 @@ colors:
 
 font:
   bold:
-    family: UbuntuMono Nerd Font
+    family: Cascadia Code
+    #family: UbuntuMono Nerd Font
     # family: mononoki Nerd Font
     # family: agave Nerd Font
     # family: Caskaydia Cove Nerd Font
@@ -41,7 +42,8 @@ font:
     # family: Hack NF
     # family: SpaceMono NF
   italic:
-    family: UbuntuMono Nerd Font
+    family: Cascadia Code
+    #family: UbuntuMono Nerd Font
     # family: mononoki Nerd Font
     # family: agave Nerd Font
     # family: Caskaydia Cove Nerd Font
@@ -52,7 +54,8 @@ font:
     # family: Hack NF
     # family: SpaceMono NF
   normal:
-    family: UbuntuMono Nerd Font
+    family: Cascadia Code
+    #family: UbuntuMono Nerd Font
     # family: mononoki Nerd Font
     # family: agave Nerd Font
     # family: Caskaydia Cove Nerd Font

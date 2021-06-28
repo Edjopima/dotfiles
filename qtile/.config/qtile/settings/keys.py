@@ -56,10 +56,10 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "space", lazy.spawn("rofi -show window -config ~/.config/.rofi/themes/onedark.rasi -show-icons")),
 
     # Browser
-    ([mod], "b", lazy.spawn("firefox")),
+    ([mod], "b", lazy.spawn("google-chrome-stable")),
 
     # File Explorer
-    ([mod], "e", lazy.spawn("pcmanfm")),
+    ([mod], "e", lazy.spawn("dolphin")),
 
     # Terminal
     ([mod], "Return", lazy.spawn("alacritty")),
@@ -69,7 +69,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "r", lazy.spawn("redshift -x")),
 
     # Screenshot
-    ([mod], "s", lazy.spawn("spectacle")),
+    ([mod, "shift"], "s", lazy.spawn("spectacle -r -c -b")),
 
     # ------------ Hardware Configs ------------
 
