@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -15,7 +8,7 @@ export ZSH="/home/edjopima/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="TheOne"
+#ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -52,6 +45,8 @@ ZSH_THEME="TheOne"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -75,9 +70,15 @@ ZSH_THEME="TheOne"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-#plugins=(git)
+plugins=(
+  git
+  history-substring-search
+  colored-man-pages
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+)
 
-
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -105,50 +106,20 @@ ZSH_THEME="TheOne"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-plugins=(
-    archlinux
-    git
-    history-substring-search
-    colored-man-pages
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-)
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-source $ZSH/oh-my-zsh.sh
-
 #Custom alias
-# alias projects="cd ~/Documentos/proyectos"
-# alias inpimaca-app="cd ~/Documentos/proyectos/inpimaca-app"
-# alias inpimaca-api="cd ~/Documentos/proyectos/inpimaca-api"
-# alias inpimacaApp="cd ~/Documentos/proyectos/inpimacaMobileApp"
-# alias portfolio="cd /home/edjopima/Documentos/proyectos/portfolio"
-# alias usavpn-start="systemctl start openvpn-client@TunnelBearUnitedStates.service"
-# alias usavpn-stop="systemctl stop openvpn-client@TunnelBearUnitedStates.service"
-# alias mexvpn-start="systemctl start openvpn-client@TunnelBearMexico.service"
-# alias mexvpn-stop="systemctl stop openvpn-client@TunnelBearMexico.service"
-# alias pos-frontend="cd /home/edjopima/Documents/work/veinte/pos-frontend"
-# alias pos-backend="cd /home/edjopima/Documents/work/veinte/pos-backend"
-alias veinteFront="cd /home/edjopima/Documents/work/veinte/veinte-frontend"
-alias veinteBack="cd /home/edjopima/Documents/work/veinte/backend-service"
-alias dot="cd home/edjopima/dotfiles"
-alias work="cd /home/edjopima/Documents/work"
-alias veinte="cd /home/edjopima/Documents/work/veinte"
+
+alias veinteFront="cd /home/edjopima/work/veinte/veinte-frontend"
+alias veinteBack="cd /home/edjopima/work/veinte/backend-service"
+alias work="cd /home/edjopima/work"
+alias veinte="cd /home/edjopima/work/veinte"
+alias dev="cd /home/edjopima/dev"
 
 export JAVA_HOME=/usr/lib/jvm/default
 export ANDROID_SDK_ROOT=/opt/android-sdk
-#export ANDROID_HOME=$HOME/Android/Sdk
-#export PATH=$PATH:$ANDROID_HOME/emulator
-#export PATH=$PATH:$ANDROID_HOME/tools
-#export PATH=$PATH:$ANDROID_HOME/tools/bin
-#export PATH=$PATH:$ANDROID_HOME/platform-tools
-
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-source /usr/share/nvm/init-nvm.sh exec /usr/bin/zsh
+eval "$(starship init zsh)"
