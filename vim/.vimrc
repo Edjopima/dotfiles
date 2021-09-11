@@ -14,7 +14,7 @@ so ~/.vim/plugins.vim
 so ~/.vim/maps.vim
 so ~/.vim/plugin-config.vim
 
-colorscheme onedark
+colorscheme dracula 
 "set background=dark
 let g:onedark_terminal_italics = 1
 let g:onedark_termcolors=256
@@ -25,12 +25,12 @@ highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 
 " Javascript
-"autocmd bufnewfile,bufread *.tsx set filetype=typescript.tsx
-"autocmd bufnewfile,bufread *.ts set filetype=typescript.tsx
-"autocmd bufnewfile,bufread *.jsx set filetype=javascript.jsx
-"autocmd bufnewfile,bufread *.js set filetype=javascript.jsx
+autocmd bufnewfile,bufread *.tsx set filetype=typescript.tsx
+autocmd bufnewfile,bufread *.ts set filetype=typescript.tsx
+autocmd bufnewfile,bufread *.jsx set filetype=javascript.jsx
+autocmd bufnewfile,bufread *.js set filetype=javascript.jsx
 
-"" Searching
+"Searching
 set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...

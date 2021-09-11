@@ -15,6 +15,7 @@ Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'dylanaraps/wal.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Tree
 Plug 'scrooloose/nerdtree'
