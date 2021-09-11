@@ -18,7 +18,7 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head',
       \   'kitestatus': 'kite#statusline'
       \ },
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'wal',
       \ 'subseparator': {
       \   'left': '',
       \   'right': ''

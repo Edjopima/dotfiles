@@ -6,6 +6,10 @@
 
 from libqtile.config import Key
 from libqtile.command import lazy
+from libqtile import qtile
+from settings.path import scripts_path
+from os import path
+
 
 
 mod = "mod4"
@@ -59,7 +63,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "b", lazy.spawn("google-chrome-stable")),
 
     # File Explorer
-    ([mod], "e", lazy.spawn("dolphin")),
+    ([mod], "e", lazy.spawn("pcmanfm")),
 
     # Terminal
     ([mod], "Return", lazy.spawn("alacritty")),
@@ -71,12 +75,23 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Screenshot
     ([mod, "shift"], "s", lazy.spawn("spectacle -r -c -b")),
 
+    # Open Veinte Projects
+    ([mod, "shift"], "v", lazy.spawn(path.join(scripts_path, "veinteProjects.sh"))),
+
+    ([mod,"control"], 'Right', lazy.screen.next_group()),
+    ([mod,"control"], 'Left', lazy.screen.prev_group()),
     # ------------ Hardware Configs ------------
 
 # Volumen
-    ([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 5")),
-    ([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
-    ([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
+    ([], "XF86AudioLowerVolume", lazy.spawn(
+        "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    )),
+    ([], "XF86AudioRaiseVolume", lazy.spawn(
+        "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+    )),
+    ([], "XF86AudioMute", lazy.spawn(
+        "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    )),
 
     # Brightness
     ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),

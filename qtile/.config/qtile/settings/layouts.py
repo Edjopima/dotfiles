@@ -11,7 +11,7 @@ from settings.theme import colors
 layout_conf = {
     'border_focus': colors['focus'][0],
     'border_width': 1,
-    'margin': 4
+    'margin': 12
 }
 
 layouts = [
@@ -44,6 +44,13 @@ floating_layout = layout.Floating(
         {'wname': 'branchdialog'},
         {'wname': 'pinentry'},
         {'wmclass': 'ssh-askpass'},
+        {'wname':'Spectacle'},
+        {'wname':'Volume Control'},
+        {'wname':'Discord Updater'},
+        {'wname':'Save As'},
+        {'wname':'win0'},
+        {'wname':'Emulator'},
+        {'wname':'Android Emulator'},
     ],
     border_focus=colors["color4"][0]
 )

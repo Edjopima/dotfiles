@@ -14,6 +14,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'joshdick/onedark.vim'
+Plug 'dylanaraps/wal.vim'
 
 " Tree
 Plug 'scrooloose/nerdtree'
