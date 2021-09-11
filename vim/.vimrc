@@ -15,7 +15,7 @@ so ~/.vim/maps.vim
 so ~/.vim/plugin-config.vim
 
 colorscheme dracula 
-"set background=dark
+set background=dark
 let g:onedark_terminal_italics = 1
 let g:onedark_termcolors=256
 let g:gruvbox_contrast_dark ="hard" 

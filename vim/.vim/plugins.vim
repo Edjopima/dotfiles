@@ -30,6 +30,7 @@ Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 
 " autocomplete
+Plug 'git@github.com:SirVer/ultisnips.git'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " test
