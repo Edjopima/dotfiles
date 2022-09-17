@@ -10,7 +10,21 @@ from libqtile import qtile
 from settings.path import scripts_path
 from os import path
 
+def window_to_previous_screen(qtile, switch_group=False, switch_screen=False):
+    i = qtile.screens.index(qtile.current_screen)
+    if i != 0:
+        group = qtile.screens[i - 1].group.name
+        qtile.current_window.togroup(group, switch_group=switch_group)
+        if switch_screen == True:
+            qtile.cmd_to_screen(i - 1)
 
+def window_to_next_screen(qtile, switch_group=False, switch_screen=False):
+    i = qtile.screens.index(qtile.current_screen)
+    if i + 1 != len(qtile.screens):
+        group = qtile.screens[i + 1].group.name
+        qtile.current_window.togroup(group, switch_group=switch_group)
+        if switch_screen == True:
+            qtile.cmd_to_screen(i + 1)
 
 mod = "mod4"
 
@@ -18,14 +32,21 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ Window Configs ------------
 
     # Switch between windows in current stack pane
-    ([mod], "j", lazy.layout.down()),
+    ([mod], "Up", lazy.layout.up()),
+    ([mod], "Down", lazy.layout.down()),
+    ([mod], "Left", lazy.layout.left()),
+    ([mod], "Right", lazy.layout.right()),
     ([mod], "k", lazy.layout.up()),
+    ([mod], "j", lazy.layout.down()),
     ([mod], "h", lazy.layout.left()),
     ([mod], "l", lazy.layout.right()),
 
     # Change window sizes (MonadTall)
     ([mod, "shift"], "l", lazy.layout.grow()),
     ([mod, "shift"], "h", lazy.layout.shrink()),
+
+    # Toggle floating
+    Key([mod], "f", lazy.window.toggle_fullscreen()),
 
     # Toggle floating
     ([mod, "shift"], "f", lazy.window.toggle_floating()),
@@ -96,4 +117,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Brightness
     ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
     ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+
+        # MOVE WINDOW TO NEXT SCREEN
+    ([mod,"shift"], "Right", lazy.function(window_to_next_screen, switch_screen=True)),
+    ([mod,"shift"], "Left", lazy.function(window_to_previous_screen, switch_screen=True)),
 ]]
