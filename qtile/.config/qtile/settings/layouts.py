@@ -49,7 +49,6 @@ floating_layout = layout.Floating(
         Match(title='Volume Control'),
         Match(title='Discord Updater'),
         Match(title='Save As'),
-        Match(title='win0'),
         Match(title='Emulator'),
         Match(title='Android Emulator'),
     ],
