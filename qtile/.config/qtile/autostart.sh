@@ -12,3 +12,4 @@ udiskie -t &
 nitrogen --restore &
 cbatticon -u 5 &
 volumeicon &
+picom &
